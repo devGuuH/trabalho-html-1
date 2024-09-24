@@ -1,0 +1,145 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Navegação */
+.nav {
+    background: #444;
+    padding: 10px 0;
+}
+
+.nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seções principais */
+.main {
+    padding: 20px;
+}
+/* Estilo dos formulários */
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.form-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: #007bff; /* Cor do foco */
+    outline: none; /* Remove a borda padrão */
+}
+
+.form-container input[type="submit"] {
+    background: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para links de navegação */
+.nav-link {
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 4px; /* Cantos arredondados */
+    transition: background 0.3s; /* Efeito suave na mudança de fundo */
+}
+
+.nav-link:hover {
+    background: #555; /* Cor de fundo ao passar o mouse */
+}
+
+/*estilo para active*/
+.nav-link.active {
+    background: #007bff; /* Cor de fundo para a página ativa */
+    color: #fff; /* Cor do texto */
+    border-radius: 4px; /* Cantos arredondados */
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Convenção de Games 2024</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function calcularTotal() {
+            const ingressoSelect = document.getElementById('ingresso');
+            const quantidadeInput = document.getElementById('quantidade');
+            const totalOutput = document.getElementById('total');
+            
+            const valoresIngressos = {
+                'vip': 200.00,
+                'padrao': 100.00,
+                'estudante': 50.00
+            };
+
+            const tipoIngresso = ingressoSelect.value;
+            const quantidade = quantidadeInput.value;
+            const total = valoresIngressos[tipoIngresso] * quantidade;
+
+            totalOutput.value = `R$ ${total.toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Convenção de Games 2024</h1>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Inscrição para o Evento</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="ingresso">Opção de Ingresso:</label>
+                <select id="ingresso" name="ingresso" required>
+                    <option value="vip">VIP - R$ 200,00</option>
+                    <option value="padrao">Padrão - R$ 100,00</option>
+                    <option value="estudante">Estudante - R$ 50,00</option>
+                </select><br><br>
+
+                <label for="quantidade">Quantidade de Ingressos:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" max="10" required oninput="calcularTotal()"><br><br>
+
+                <label for="total">Valor Total:</label>
+                <input type="text" id="total" name="total" readonly><br><br>
+
+                <input type="submit" value="Inscrever-se">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Convenção de Games - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
